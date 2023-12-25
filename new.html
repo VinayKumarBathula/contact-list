@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact List Management</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f2f2f2;
+    }
+    header {
+      background-color:red;
+      color: grey;
+      padding: 10px;
+      text-align: center;
+    }
+    button {
+      padding: 10px;
+      margin: 5px;
+      cursor: pointer;
+    }
+    #contact-list {
+      margin: 20px;
+    }
+    .contact-card {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin: 10px;
+      background-color: white;
+      cursor: pointer;
+    }
+    #contact-popup {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #ffffff;
+      padding: 20px;
+     
+      z-index: 999;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Contact List Management website</h1>
+</header>
+
+<div id="contact-list">
+  <div class="contact-card" onclick="showContactDetails()">
+    <h3>Contact Details</h3>
+    <p>BATHULA VINAY KUMAR</p>
+    <p>contact no:8790249846</p>
+  </div>
+ 
+</div>
+
+<div id="contact-popup">
+  <h2>Contact Details</h2>
+  <p>BATHULA VINAY KUMAR</p>
+  <p>contact no:8790249846</p>
+  <button onclick="editContact()">Edit</button>
+  <button onclick="deleteContact()">Delete</button>
+  <button onclick="closePopup()">Close</button>
+</div>
+
+<button onclick="openRegistrationPage()">Register</button>
+<button onclick="openLoginPage()">Login</button>
+<button onclick="openCreateContactPage()">Create Contact</button>
+
+<script>
+  function openRegistrationPage() {
+
+    alert("Open Registration Page");
+  }
+
+  function openLoginPage() {
+  
+    alert("Open Login Page");
+  }
+
+  function openCreateContactPage() {
+   
+    alert("Open Create Contact Page");
+  }
+
+  function showContactDetails() {
+   
+    document.getElementById('contact-popup').style.display = 'block';
+  }
+
+  function editContact() {
+    
+    alert("Edit Contact");
+  }
+
+  function deleteContact() {
+    
+    alert("Delete Contact");
+  }
+
+  function closePopup() {
+
+    document.getElementById('contact-popup').style.display = 'none';
+  }
+</script>
+
+</body>
+</html>
